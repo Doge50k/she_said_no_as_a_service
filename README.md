@@ -35,6 +35,14 @@ npm start
 
 O servidor sobe em `http://localhost:3000`.
 
+## Rodando com Docker
+
+```bash
+docker compose up --build
+```
+
+Depois disso, a API fica disponível em `http://localhost:3000`.
+
 ## Adicionando frases
 
 Edite o arquivo `data/phrases.txt` — uma frase por linha. Reinicie o servidor para carregar as novas frases.
