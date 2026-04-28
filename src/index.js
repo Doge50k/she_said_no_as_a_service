@@ -17,6 +17,7 @@ const rateLimit = require('@fastify/rate-limit');
 const { getRandom } = require('./phrases');
 
 const PORT = 3000;
+const HOST = '0.0.0.0';
 const RATE_LIMIT = 20;
 const RATE_WINDOW = 60_000;
 
@@ -48,8 +49,8 @@ async function start() {
   });
 
   try {
-    await fastify.listen({ port: PORT, host: '127.0.0.1' });
-    fastify.log.info(`She Said No As A Service rodando em http://127.0.0.1:${PORT}`);
+    await fastify.listen({ port: PORT, host: HOST });
+    fastify.log.info(`She Said No As A Service rodando em http://${HOST}:${PORT}`);
   } catch {
     process.exit(1);
   }
